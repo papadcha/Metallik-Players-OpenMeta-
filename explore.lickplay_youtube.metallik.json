@@ -1,0 +1,38 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] lickPlay's YouTube ([COLOR FF0084FF][/COLOR])",
+ "repository"   : "",
+ "plugin"       : "scriptlickplay",
+ "priority"     : 700,
+ "id"           : "explorelickplay_youtube",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://scriptlickplay/?info=youtubesearch&id={artist}+{album}+{track}",
+    "steps"     : [
+     ".*{artist}.*{album}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://scriptlickplay/?info=youtubesearch&id={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://scriptlickplay/?info=youtubesearch&id={track}",
+    "steps"     : [
+     ".*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "live"         : []
+}
