@@ -1,0 +1,25 @@
+{
+ "name"         : "Search [COLOR FF0084FF]-[/COLOR] Hype Machine ([COLOR FF0084FF][/COLOR])",
+ "repository"   : "",
+ "plugin"       : "plugin.audio.hypem_com",
+ "priority"     : 900,
+ "id"           : "search.hypem_com",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [
+  [
+   {
+    "link"      : "plugin://plugin.audio.hypem_com/?mode=search",
+    "steps"     : [
+     "@keyboard:{cleartrack_+}",
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : []
+}

@@ -1,0 +1,25 @@
+{
+ "name"         : "Navigate [COLOR Green]-[/COLOR] The Loop ([COLOR Green]Munkee[/COLOR])",
+ "repository"   : "",
+ "plugin"       : "plugin.video.the-loop",
+ "priority"     : 800,
+ "id"           : "navigate.theloop.m",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.the-loop",
+    "steps": [
+     ".*Live TV.*",
+     "{name}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}
