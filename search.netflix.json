@@ -1,0 +1,80 @@
+{
+ "name"         : "[COLOR red]Netflix[/COLOR]",
+ "plugin"       : "plugin.video.netflix",
+ "priority"     : 300,
+ "id"           : "search.netflix",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.netflix/?action=search_result&term={title_+}",
+    "steps"     : [
+     "{title}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.netflix/directory/search/{title_+}/",
+    "steps"     : [
+     "{title}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.netflix/?action=search_result&term={clearname_+}",
+    "steps"     : [
+     "{clearname}",
+     ".* {season}",
+     "{episode}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.netflix/?action=search_result&term={clearname_+}",
+    "steps"     : [
+     "{clearname}",
+     "{episode}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.netflix/?action=search_result&term={clearname_+}",
+    "steps"     : [
+     "{clearname}",
+     "{clearname}",
+     "{episode}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.netflix/directory/search/{clearname_+}/",
+    "steps"     : [
+     "{clearname}",
+     ".* {season}",
+     "{episode}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.netflix/directory/search/{clearname_+}/",
+    "steps"     : [
+     "{clearname}",
+     "{episode}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.netflix/directory/search/{clearname_+}/",
+    "steps"     : [
+     "{clearname}",
+     "{clearname}",
+     "{episode}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}
